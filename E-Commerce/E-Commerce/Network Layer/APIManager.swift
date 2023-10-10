@@ -38,9 +38,16 @@ class APIManager {
                     }
                     let jsonDecoder = JSONDecoder()
                     jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-                    let result = try jsonDecoder.decode(T.self, from: jsonData)
+                    let result = try jsonDecoder.decode(BaseResponse<T>.self, from: jsonData)
                     
-                    handler(.success(result))
+                    if result.success {
+                        if let data = result.data {
+                            handler(.success(data))
+                        }
+                    } else {
+                        handler(.failure(.init(title: APIError.errorAlertTitle, body: result.message)))
+                    }
+                    
                     
                 } catch {
                     handler(.failure(self.parseApiError(dataResponse: data)))

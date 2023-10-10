@@ -9,30 +9,7 @@ import Foundation
 import Alamofire
 
 enum RequestItemsType: Equatable {
-    case authToken(code: String)
-    case refreshToken
-    case authenticatedUserProfile
-    case getUserPlaylists
-    case getUserAlbumbs
-    case getFeaturedPlaylist
-    case getUserArtists
-    case getAlbums
-    case playlist(id: String)
-    case getPlaylistSongs(id: String)
-    case getAlbumTracks(id: String)
-    case getArtist(id: String)
-    case categories
-    case search
-    case track(id: String)
-    case checkLike
-    case likeTrack
-    case dislikeTrack
-    case getArtistTopTracks(id: String)
-    case getRelatedArtists(id: String)
-    case getUserPodcats
-    case getShows(id: String)
-    case categoryPlaylist(category: String)
-    case getTrack(id: String)
+    case login
 }
 
 // MARK: Extensions
@@ -45,90 +22,29 @@ extension RequestItemsType: EndPointType {
     var baseURL: String {
         
         switch self {
-        case .authToken, .refreshToken:
-            return AppConstants.baseAuth
-        case .authenticatedUserProfile, .getUserPlaylists, .getUserArtists, .getAlbums, .playlist, .getPlaylistSongs, .getAlbumTracks, .getArtist, .getUserAlbumbs, .getFeaturedPlaylist, .categories, .search, .track, .checkLike, .likeTrack, .dislikeTrack, .getArtistTopTracks, .getRelatedArtists, .getUserPodcats, .getShows, .categoryPlaylist, .getTrack:
+        case .login:
             return AppConstants.baseApi
-        }
-    }
-    
-    var api: String {
-        switch self {
-        case .authToken, .refreshToken:
-            return AppConstants.api
-        case .authenticatedUserProfile, .getUserPlaylists, .getUserArtists, .getAlbums, .playlist, .getPlaylistSongs, .getAlbumTracks, .getArtist, .getUserAlbumbs, .getFeaturedPlaylist, .categories, .search, .track, .checkLike, .likeTrack, .dislikeTrack, .getArtistTopTracks, .getRelatedArtists, .getUserPodcats, .getShows, .categoryPlaylist, .getTrack:
-            return ""
         }
     }
     
     var version: String {
         switch self {
-        case .authToken, .refreshToken:
-            return ""
-        case .authenticatedUserProfile, .getUserPlaylists, .getUserArtists, .getAlbums, .playlist, .getPlaylistSongs, .getAlbumTracks, .getArtist, .getUserAlbumbs, .getFeaturedPlaylist, .categories, .search, .track, .checkLike, .likeTrack, .dislikeTrack, .getArtistTopTracks, .getRelatedArtists, .getUserPodcats, .getShows, .categoryPlaylist, .getTrack:
+        case .login:
             return AppConstants.apiVersion
         }
     }
     
     var path: String {
         switch self {
-        case .authToken, .refreshToken:
-            return "token"
-        case .authenticatedUserProfile:
-            return "me"
-        case .getUserPlaylists:
-            return "me/playlists?limit=50"
-        case .getUserAlbumbs:
-            return "me/top/tracks"
-        case .getFeaturedPlaylist:
-            return "browse/featured-playlists"
-        case .getUserArtists:
-            return "me/following?type=artist"
-        case .getAlbums:
-            return "me/albums"
-        case .playlist(let id):
-            return "playlists/\(id)"
-        case .getPlaylistSongs(let id):
-            return "playlists/\(id)"
-        case .getAlbumTracks(let id):
-            return "albums/\(id)"
-        case .getArtist(let id):
-            return "artists/\(id)"
-        case .categories:
-            return "browse/categories"
-        case .search:
-            return "search"
-        case .track(let id):
-            return "tracks/\(id)"
-        case .checkLike:
-            return "me/tracks/contains"
-        case .likeTrack, .dislikeTrack:
-            return "me/tracks"
-        case .getArtistTopTracks(let id):
-            return "artists/\(id)/top-tracks?market=IN"
-        case .getRelatedArtists(let id):
-            return "artists/\(id)/related-artists"
-        case .getUserPodcats:
-            return "me/shows"
-        case .getShows(let id):
-            return "shows/\(id)/episodes"
-        case .categoryPlaylist(let category):
-            return "browse/categories/\(category)/playlists"
-        case .getTrack(let id):
-            return "tracks/\(id)"
+        case .login:
+            return "login"
         }
     }
     
     var httpMethod: HTTPMethod {
         switch self {
-        case .authenticatedUserProfile, .getUserPlaylists, .getUserArtists, .getAlbums, .playlist, .getPlaylistSongs, .getAlbumTracks, .getArtist, .getUserAlbumbs, .getFeaturedPlaylist, .categories, .search, .track, .checkLike, .getRelatedArtists, .getArtistTopTracks, .getUserPodcats, .getShows, .categoryPlaylist, .getTrack:
-            return .get
-        case .authToken, .refreshToken:
+        case .login:
             return .post
-        case .likeTrack:
-            return .put
-        case .dislikeTrack:
-            return .delete
         }
     }
     
@@ -137,16 +53,12 @@ extension RequestItemsType: EndPointType {
     }
     
     var url: URL {
-        return URL(string: self.baseURL + self.api + self.version +  self.path)!
+        return URL(string: self.baseURL + self.version +  self.path)!
     }
     
     var encoding: ParameterEncoding {
         switch self {
-        case .authToken, .refreshToken:
-            return URLEncoding.httpBody
-        case .search, .checkLike:
-            return URLEncoding.queryString
-        default:
+        case .login:
             return JSONEncoding.default
         }
     }
