@@ -24,9 +24,9 @@ class AppCoordinator: Coordinator {
     }
     
     func goToCombineScreen() {
-//        let combineCoordinator = CombineCoordinator(navigationController: navigationController)
-//        self.window.rootViewController = navigationController
-//        combineCoordinator.start()
+        let combineCoordinator = HomeCoordinator(navigationController: navigationController)
+        self.window.rootViewController = navigationController
+        combineCoordinator.start()
     }
     
     func goToAuth(with code: String? = nil) {

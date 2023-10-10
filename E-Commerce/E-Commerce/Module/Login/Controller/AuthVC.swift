@@ -32,9 +32,10 @@ class AuthVC: UIViewController, Storyboarded {
     
     private func bindViewModel() {
         
-        viewModel.loginSuccess.bind { loginResponse in
+        viewModel.loginSuccess.bind { [weak self] loginResponse in
             if let response = loginResponse {
                 print(response)
+                self?.authCoordinator?.goToHome()
             }
         }
         
