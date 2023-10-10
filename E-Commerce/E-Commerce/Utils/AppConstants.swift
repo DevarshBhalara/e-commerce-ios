@@ -8,7 +8,7 @@
 class AppConstants {
     
     static let baseAuth = "https://accounts.spotify.com/"
-    static let baseApi = "https://api.spotify.com/"
+    static let baseApi = "https://ecommerce-node-js-eight.vercel.app/api/"
     static let api = "api/"
     static let apiVersion = "v1/"
     static let clientId = "872e3af2b1bd4d678f3f75c3570e1110"
