@@ -51,6 +51,12 @@
 		117B88102AD66FFD002DEC7A /* ProductCollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117B880E2AD66FFD002DEC7A /* ProductCollectionViewHeader.xib */; };
 		117B88132AD67358002DEC7A /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B88122AD67358002DEC7A /* ProductsTableViewCell.swift */; };
 		117B88152AD673C8002DEC7A /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B88142AD673C8002DEC7A /* ProductCollectionViewCell.swift */; };
+		11A86E9C2AD6D10D00529633 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A86E9B2AD6D10D00529633 /* SignUp.storyboard */; };
+		11A86E9E2AD6D21800529633 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A86E9D2AD6D21800529633 /* SignUpCoordinator.swift */; };
+		11A86EA02AD6D5DD00529633 /* UIButton+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A86E9F2AD6D5DD00529633 /* UIButton+Extenstion.swift */; };
+		11A86EA22AD6D6CC00529633 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A86EA12AD6D6CC00529633 /* SignUpViewController.swift */; };
+		11A86EA42AD6E56700529633 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A86EA32AD6E56700529633 /* SignUpViewModel.swift */; };
+		11A86EA62AD6E6AE00529633 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A86EA52AD6E6AE00529633 /* SignUp.swift */; };
 		7E09A4E34FF2B1AE48DEBCE1 /* Pods_E_Commerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADF5597B44208AA339BA9DC /* Pods_E_Commerce.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +107,12 @@
 		117B880E2AD66FFD002DEC7A /* ProductCollectionViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewHeader.xib; sourceTree = "<group>"; };
 		117B88122AD67358002DEC7A /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
 		117B88142AD673C8002DEC7A /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		11A86E9B2AD6D10D00529633 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		11A86E9D2AD6D21800529633 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		11A86E9F2AD6D5DD00529633 /* UIButton+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extenstion.swift"; sourceTree = "<group>"; };
+		11A86EA12AD6D6CC00529633 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		11A86EA32AD6E56700529633 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		11A86EA52AD6E6AE00529633 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		6B26E751580701162A2D733B /* Pods-E-Commerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Commerce.debug.xcconfig"; path = "Target Support Files/Pods-E-Commerce/Pods-E-Commerce.debug.xcconfig"; sourceTree = "<group>"; };
 		9ADF5597B44208AA339BA9DC /* Pods_E_Commerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_Commerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C4A0E8CB60AC0B6583D861 /* Pods-E-Commerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Commerce.release.xcconfig"; path = "Target Support Files/Pods-E-Commerce/Pods-E-Commerce.release.xcconfig"; sourceTree = "<group>"; };
@@ -276,6 +288,7 @@
 				116D83F52A939B70002D93DE /* URL+extentions.swift */,
 				111C9E6F2A963C2B00B14541 /* UITextField+extension.swift */,
 				111C9E712A963C6B00B14541 /* UIImageView+extension.swift */,
+				11A86E9F2AD6D5DD00529633 /* UIButton+Extenstion.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -288,6 +301,7 @@
 				116D83FE2A93A1F6002D93DE /* Storyboarded.swift */,
 				116D84032A93A382002D93DE /* AuthCoordinator.swift */,
 				112E34D22AD5AEF500BC8B7E /* HomeCoordinator.swift */,
+				11A86E9D2AD6D21800529633 /* SignUpCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -295,6 +309,7 @@
 		116D84052A93A479002D93DE /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				11A86E942AD6D09800529633 /* SignUp */,
 				112E34C52AD5AAA900BC8B7E /* Home */,
 				116D840D2A93A4BA002D93DE /* Login */,
 			);
@@ -362,6 +377,49 @@
 				117B88122AD67358002DEC7A /* ProductsTableViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		11A86E942AD6D09800529633 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				11A86E982AD6D0E800529633 /* Model */,
+				11A86E972AD6D0E200529633 /* Controller */,
+				11A86E962AD6D0D900529633 /* ViewModel */,
+				11A86E952AD6D0B700529633 /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		11A86E952AD6D0B700529633 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11A86E9B2AD6D10D00529633 /* SignUp.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11A86E962AD6D0D900529633 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11A86EA32AD6E56700529633 /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11A86E972AD6D0E200529633 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				11A86EA12AD6D6CC00529633 /* SignUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		11A86E982AD6D0E800529633 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11A86EA52AD6E6AE00529633 /* SignUp.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		6D750FA932F098774FF1615F /* Pods */ = {
@@ -444,6 +502,7 @@
 				116D840A2A93A49A002D93DE /* Auth.storyboard in Resources */,
 				112E34CB2AD5AAD400BC8B7E /* Home.storyboard in Resources */,
 				114421322A9394EF00A59805 /* LaunchScreen.storyboard in Resources */,
+				11A86E9C2AD6D10D00529633 /* SignUp.storyboard in Resources */,
 				1144212F2A9394EF00A59805 /* Assets.xcassets in Resources */,
 				1144212D2A9394EE00A59805 /* Main.storyboard in Resources */,
 				117B88102AD66FFD002DEC7A /* ProductCollectionViewHeader.xib in Resources */,
@@ -507,8 +566,10 @@
 				116D84042A93A382002D93DE /* AuthCoordinator.swift in Sources */,
 				116D83E82A939AC4002D93DE /* APIManager+EndPoints.swift in Sources */,
 				117B880F2AD66FFD002DEC7A /* ProductCollectionViewHeader.swift in Sources */,
+				11A86EA22AD6D6CC00529633 /* SignUpViewController.swift in Sources */,
 				116D83FA2A939B70002D93DE /* URL+extentions.swift in Sources */,
 				116D84002A93A1F6002D93DE /* Coordinator.swift in Sources */,
+				11A86EA02AD6D5DD00529633 /* UIButton+Extenstion.swift in Sources */,
 				117B88132AD67358002DEC7A /* ProductsTableViewCell.swift in Sources */,
 				117B88072AD66467002DEC7A /* CategoryCollectionCell.swift in Sources */,
 				117B880B2AD66933002DEC7A /* SliderCollectionViewCell.swift in Sources */,
@@ -518,6 +579,7 @@
 				1144212A2A9394EE00A59805 /* ViewController.swift in Sources */,
 				116D83E92A939AC4002D93DE /* APIManager.swift in Sources */,
 				117B88152AD673C8002DEC7A /* ProductCollectionViewCell.swift in Sources */,
+				11A86EA62AD6E6AE00529633 /* SignUp.swift in Sources */,
 				111C9E742A965A0600B14541 /* LoginViewModel.swift in Sources */,
 				112E34CF2AD5AAF500BC8B7E /* HomeViewModel.swift in Sources */,
 				116D83F82A939B70002D93DE /* UIViewController+extentions.swift in Sources */,
@@ -531,12 +593,14 @@
 				114421262A9394EE00A59805 /* AppDelegate.swift in Sources */,
 				116D83EF2A939B4B002D93DE /* APIManager+Inerceptor.swift in Sources */,
 				116D83CF2A939AA2002D93DE /* KeychainHelper.swift in Sources */,
+				11A86EA42AD6E56700529633 /* SignUpViewModel.swift in Sources */,
 				116D83F62A939B70002D93DE /* UIColor+extentions.swift in Sources */,
 				112E34D32AD5AEF500BC8B7E /* HomeCoordinator.swift in Sources */,
 				117B88092AD668DD002DEC7A /* Slider.swift in Sources */,
 				112E34D12AD5ACA500BC8B7E /* Products.swift in Sources */,
 				114421282A9394EE00A59805 /* SceneDelegate.swift in Sources */,
 				111C9E772A965B7E00B14541 /* BaseResponse.swift in Sources */,
+				11A86E9E2AD6D21800529633 /* SignUpCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

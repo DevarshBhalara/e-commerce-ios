@@ -50,6 +50,10 @@ class AuthVC: UIViewController, Storyboarded {
         }
     }
     
+    @IBAction func actionBtnSignUp(_ sender: UIButton) {
+        authCoordinator?.goToSignUp()
+    }
+    
     @IBAction func actionBtnLogin(_ sender: UIButton) {
         viewModel.validateInput(email: tfEmail.text ?? "", password: tfPassword.text ?? "")
     }

@@ -79,6 +79,9 @@
                                                 <rect key="frame" x="187.33333333333334" y="0.0" width="84.000000000000028" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                                                <connections>
+                                                    <action selector="actionBtnSignUp:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="b3w-G6-MI5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -124,17 +127,17 @@
     </scenes>
     <designables>
         <designable name="2of-wr-B3e">
-            <size key="intrinsicContentSize" width="173" height="34"/>
+            <size key="intrinsicContentSize" width="214" height="42.666666666666664"/>
         </designable>
         <designable name="vv6-mE-odW">
-            <size key="intrinsicContentSize" width="90.333333333333329" height="34"/>
+            <size key="intrinsicContentSize" width="131.33333333333334" height="41"/>
         </designable>
     </designables>
     <resources>
         <image name="mail" catalog="system" width="128" height="93"/>
         <image name="shopbg" width="6300" height="2965"/>
         <namedColor name="primary">
-            <color red="0.68235294117647061" green="0.82745098039215681" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68199998140335083" green="0.82700002193450928" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary_lowalpa">
             <color red="0.68199998140335083" green="0.82700002193450928" blue="0.9649999737739563" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>

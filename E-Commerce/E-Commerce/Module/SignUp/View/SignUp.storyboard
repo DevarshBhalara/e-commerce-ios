@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="Bw8-vD-juK">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" id="GCt-6O-LSD" customClass="SignUpViewController" customModule="E_Commerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rCZ-vX-g6b">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shopbg" translatesAutoresizingMaskIntoConstraints="NO" id="cah-Of-9gn">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gj0-Ya-nvU">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFi-c0-8xZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnm-vJ-yYx">
+                                                <rect key="frame" x="102.66666666666669" y="80" width="185" height="23"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-nO-hXK" customClass="TextFieldCustom" customModule="E_Commerce" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="139" width="350" height="40.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="person.fill" catalog="system"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9oD-wf-hBf" customClass="TextFieldCustom" customModule="E_Commerce" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="208.66666666666666" width="350" height="40.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="phone.fill" catalog="system"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvA-h6-qCE" customClass="TextFieldCustom" customModule="E_Commerce" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="287.33333333333331" width="350" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="mail.fill" catalog="system"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7N-SN-pbZ" customClass="TextFieldPassword" customModule="E_Commerce" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="358.66666666666669" width="350" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1r-Ye-Bt3">
+                                                <rect key="frame" x="153" y="512.66666666666663" width="84" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Sign Up">
+                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="actionBtnSignUp:" destination="GCt-6O-LSD" eventType="touchUpInside" id="dHX-G0-Auk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbK-V6-fQ5" customClass="RadioButton" customModule="E_Commerce" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="418" width="60" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="User"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="actionBtnUser:" destination="GCt-6O-LSD" eventType="touchUpInside" id="wlX-zd-u9U"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOk-G4-7Ih" customClass="RadioButton" customModule="E_Commerce" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="453" width="67" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Seller"/>
+                                                <connections>
+                                                    <action selector="actionBtnSeller:" destination="GCt-6O-LSD" eventType="touchUpInside" id="mPX-hA-Dnl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="primary_lowalpa"/>
+                                        <constraints>
+                                            <constraint firstItem="tvA-h6-qCE" firstAttribute="height" secondItem="9oD-wf-hBf" secondAttribute="height" multiplier="0.842105" id="57H-mP-WsJ"/>
+                                            <constraint firstItem="d4N-nO-hXK" firstAttribute="leading" secondItem="wFi-c0-8xZ" secondAttribute="leading" constant="20" id="9tS-Cj-QOA"/>
+                                            <constraint firstItem="d4N-nO-hXK" firstAttribute="height" secondItem="wFi-c0-8xZ" secondAttribute="height" multiplier="0.06" id="BND-sV-ywV"/>
+                                            <constraint firstItem="9oD-wf-hBf" firstAttribute="height" secondItem="d4N-nO-hXK" secondAttribute="height" id="I5s-pN-dYT"/>
+                                            <constraint firstItem="9oD-wf-hBf" firstAttribute="trailing" secondItem="d4N-nO-hXK" secondAttribute="trailing" id="IuA-c6-zf7"/>
+                                            <constraint firstItem="tvA-h6-qCE" firstAttribute="leading" secondItem="9oD-wf-hBf" secondAttribute="leading" id="M3K-xL-vkZ"/>
+                                            <constraint firstItem="DbK-V6-fQ5" firstAttribute="leading" secondItem="o7N-SN-pbZ" secondAttribute="leading" id="NHY-hV-DnE"/>
+                                            <constraint firstItem="o7N-SN-pbZ" firstAttribute="top" secondItem="tvA-h6-qCE" secondAttribute="bottom" constant="37.333333333333314" id="WMt-z6-Gfo"/>
+                                            <constraint firstItem="tvA-h6-qCE" firstAttribute="trailing" secondItem="9oD-wf-hBf" secondAttribute="trailing" id="WSS-DK-kQD"/>
+                                            <constraint firstItem="o7N-SN-pbZ" firstAttribute="trailing" secondItem="tvA-h6-qCE" secondAttribute="trailing" id="aqI-8Y-Ud9"/>
+                                            <constraint firstItem="o7N-SN-pbZ" firstAttribute="height" secondItem="tvA-h6-qCE" secondAttribute="height" id="bc0-vX-bVK"/>
+                                            <constraint firstItem="9oD-wf-hBf" firstAttribute="leading" secondItem="d4N-nO-hXK" secondAttribute="leading" id="fO0-xA-AE1"/>
+                                            <constraint firstAttribute="trailing" secondItem="d4N-nO-hXK" secondAttribute="trailing" constant="20" id="fdz-ZJ-cJJ"/>
+                                            <constraint firstItem="yOk-G4-7Ih" firstAttribute="top" secondItem="DbK-V6-fQ5" secondAttribute="bottom" id="g4P-2Z-8YJ"/>
+                                            <constraint firstItem="pnm-vJ-yYx" firstAttribute="centerX" secondItem="wFi-c0-8xZ" secondAttribute="centerX" id="hey-of-c2D"/>
+                                            <constraint firstItem="yOk-G4-7Ih" firstAttribute="leading" secondItem="DbK-V6-fQ5" secondAttribute="leading" id="i4c-s8-C87"/>
+                                            <constraint firstItem="9oD-wf-hBf" firstAttribute="top" secondItem="d4N-nO-hXK" secondAttribute="bottom" constant="29.333333333333343" id="iIX-cn-XB2"/>
+                                            <constraint firstItem="tvA-h6-qCE" firstAttribute="top" secondItem="9oD-wf-hBf" secondAttribute="bottom" constant="38.333333333333371" id="ivk-ic-62D"/>
+                                            <constraint firstItem="E1r-Ye-Bt3" firstAttribute="centerX" secondItem="o7N-SN-pbZ" secondAttribute="centerX" id="mwO-m4-wSa"/>
+                                            <constraint firstItem="E1r-Ye-Bt3" firstAttribute="top" secondItem="yOk-G4-7Ih" secondAttribute="bottom" constant="24.666666666666629" id="o2b-9p-TId"/>
+                                            <constraint firstItem="pnm-vJ-yYx" firstAttribute="top" secondItem="wFi-c0-8xZ" secondAttribute="top" constant="80" id="sy5-j9-F6G"/>
+                                            <constraint firstItem="o7N-SN-pbZ" firstAttribute="leading" secondItem="tvA-h6-qCE" secondAttribute="leading" id="vQq-vu-JTy"/>
+                                            <constraint firstItem="d4N-nO-hXK" firstAttribute="top" secondItem="pnm-vJ-yYx" secondAttribute="bottom" constant="36" id="yIf-Ud-ZUM"/>
+                                            <constraint firstItem="DbK-V6-fQ5" firstAttribute="top" secondItem="o7N-SN-pbZ" secondAttribute="bottom" constant="25.333333333333314" id="z07-91-B68"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wFi-c0-8xZ" firstAttribute="leading" secondItem="Gj0-Ya-nvU" secondAttribute="leading" id="96J-uC-IYd"/>
+                                    <constraint firstAttribute="bottom" secondItem="wFi-c0-8xZ" secondAttribute="bottom" id="9if-wu-gfw"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFi-c0-8xZ" secondAttribute="trailing" id="Hwo-Pr-tuK"/>
+                                    <constraint firstItem="wFi-c0-8xZ" firstAttribute="width" secondItem="Gj0-Ya-nvU" secondAttribute="width" id="XsH-Ec-6qm"/>
+                                    <constraint firstItem="wFi-c0-8xZ" firstAttribute="top" secondItem="Gj0-Ya-nvU" secondAttribute="top" id="dch-uI-otV"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xam-ct-g0a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gj0-Ya-nvU" firstAttribute="top" secondItem="rCZ-vX-g6b" secondAttribute="top" id="813-yx-0an"/>
+                            <constraint firstAttribute="bottom" secondItem="Gj0-Ya-nvU" secondAttribute="bottom" id="FAk-ZX-OO9"/>
+                            <constraint firstItem="Gj0-Ya-nvU" firstAttribute="leading" secondItem="xam-ct-g0a" secondAttribute="leading" id="MXy-0p-A4i"/>
+                            <constraint firstItem="Gj0-Ya-nvU" firstAttribute="trailing" secondItem="xam-ct-g0a" secondAttribute="trailing" id="ylz-92-CVN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnSignUp" destination="E1r-Ye-Bt3" id="13V-ZE-cXu"/>
+                        <outlet property="radioBtnSeller" destination="yOk-G4-7Ih" id="i3H-es-0s6"/>
+                        <outlet property="radioBtnUser" destination="DbK-V6-fQ5" id="mhp-vm-xEb"/>
+                        <outlet property="tfEmail" destination="tvA-h6-qCE" id="Eef-x3-s60"/>
+                        <outlet property="tfMobileNumber" destination="9oD-wf-hBf" id="cBf-cN-LdV"/>
+                        <outlet property="tfName" destination="d4N-nO-hXK" id="9EU-2c-CVc"/>
+                        <outlet property="tfPassword" destination="o7N-SN-pbZ" id="27n-fL-a3p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qef-z1-vh2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-586.15384615384619" y="-383.17535545023696"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="9oD-wf-hBf">
+            <size key="intrinsicContentSize" width="127" height="34"/>
+        </designable>
+        <designable name="d4N-nO-hXK">
+            <size key="intrinsicContentSize" width="66" height="34"/>
+        </designable>
+        <designable name="o7N-SN-pbZ">
+            <size key="intrinsicContentSize" width="90.333333333333329" height="34"/>
+        </designable>
+        <designable name="tvA-h6-qCE">
+            <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="mail.fill" catalog="system" width="128" height="93"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="shopbg" width="6300" height="2965"/>
+        <namedColor name="primary_lowalpa">
+            <color red="0.68199998140335083" green="0.82700002193450928" blue="0.9649999737739563" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

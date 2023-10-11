@@ -69,3 +69,54 @@ class TextFieldCustom: UITextField {
         returnKeyType = .done
     }
 }
+
+@IBDesignable
+class TextFieldPassword: UITextField {
+    
+    let button = UIButton(type: .custom)
+    let textPadding = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
+    
+    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: textPadding)
+    }
+    
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: UIEdgeInsets(top: 3, left: 15, bottom: 0, right: 0))
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        updateView()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        updateView()
+    }
+
+
+    private func updateView() {
+        layer.masksToBounds = true
+        layer.cornerRadius = 10
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.lightGray.cgColor
+        returnKeyType = .done
+    }
+    
+    func enablePasswordToggle(){
+            
+            button.setImage(UIImage(systemName: "eye"), for: .normal)
+            button.setImage(UIImage(systemName: "eye.slash"), for: .selected)
+            button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -15, bottom: 0, right: 15)
+            button.addTarget(self, action: #selector(togglePasswordView), for: .touchUpInside)
+        button.tintColor = .black
+            rightView = button
+            rightViewMode = .always
+            button.alpha = 1
+        }
+        
+        @objc func togglePasswordView(_ sender: Any) {
+            isSecureTextEntry.toggle()
+            button.isSelected.toggle()
+        }
+}
