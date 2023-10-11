@@ -25,5 +25,10 @@ class AuthCoordinator: Coordinator {
         navigationController.viewControllers = [authVC]
     }
     
+    func goToHome() {
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        homeCoordinator.start()
+    }
+    
 }
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCollectionViewHeader" id="U6b-Vx-4bR" customClass="ProductCollectionViewHeader" customModule="E_Commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6b-Pb-KIO">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CU5-Br-dLL">
+                            <rect key="frame" x="0.0" y="15.666666666666664" width="49.333333333333336" height="23"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZa-13-CZT">
+                            <rect key="frame" x="243.66666666666666" y="9.6666666666666643" width="76.333333333333343" height="35"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="See All"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="HZa-13-CZT" firstAttribute="centerY" secondItem="l6b-Pb-KIO" secondAttribute="centerY" id="2if-pE-5S9"/>
+                        <constraint firstItem="CU5-Br-dLL" firstAttribute="leading" secondItem="l6b-Pb-KIO" secondAttribute="leading" id="bCC-i9-QxE"/>
+                        <constraint firstItem="CU5-Br-dLL" firstAttribute="centerY" secondItem="l6b-Pb-KIO" secondAttribute="centerY" id="jNR-56-bFp"/>
+                        <constraint firstAttribute="trailing" secondItem="HZa-13-CZT" secondAttribute="trailing" id="sPT-19-Ub6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="l6b-Pb-KIO" secondAttribute="bottom" id="Nqg-LY-m2t"/>
+                <constraint firstItem="l6b-Pb-KIO" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="WQK-cT-Oth"/>
+                <constraint firstAttribute="trailing" secondItem="l6b-Pb-KIO" secondAttribute="trailing" id="iGu-2M-ndd"/>
+                <constraint firstItem="l6b-Pb-KIO" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="lgC-6h-Emj"/>
+            </constraints>
+            <connections>
+                <outlet property="btnSeeAll" destination="HZa-13-CZT" id="xzx-QL-V29"/>
+                <outlet property="lblName" destination="CU5-Br-dLL" id="ekN-o8-S4i"/>
+            </connections>
+            <point key="canvasLocation" x="13.740458015267174" y="1.4084507042253522"/>
+        </collectionReusableView>
+    </objects>
+</document>

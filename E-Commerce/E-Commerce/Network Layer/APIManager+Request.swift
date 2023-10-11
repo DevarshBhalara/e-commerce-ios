@@ -10,6 +10,7 @@ import Alamofire
 
 enum RequestItemsType: Equatable {
     case login
+    case initialProducts
 }
 
 // MARK: Extensions
@@ -22,14 +23,14 @@ extension RequestItemsType: EndPointType {
     var baseURL: String {
         
         switch self {
-        case .login:
+        case .login, .initialProducts:
             return AppConstants.baseApi
         }
     }
     
     var version: String {
         switch self {
-        case .login:
+        case .login, .initialProducts:
             return AppConstants.apiVersion
         }
     }
@@ -38,6 +39,8 @@ extension RequestItemsType: EndPointType {
         switch self {
         case .login:
             return "login"
+        case .initialProducts:
+            return "get-product/"
         }
     }
     
@@ -45,11 +48,18 @@ extension RequestItemsType: EndPointType {
         switch self {
         case .login:
             return .post
+        case .initialProducts:
+            return .get
         }
     }
     
     var headers: HTTPHeaders? {
-        return []
+        switch self {
+        case .initialProducts:
+            return ["Authorization" : KeychainHelper.shared.accessToken ?? ""]
+        case .login:
+            return []
+        }
     }
     
     var url: URL {
@@ -57,10 +67,7 @@ extension RequestItemsType: EndPointType {
     }
     
     var encoding: ParameterEncoding {
-        switch self {
-        case .login:
-            return JSONEncoding.default
-        }
+        return JSONEncoding.default
     }
     
 }
