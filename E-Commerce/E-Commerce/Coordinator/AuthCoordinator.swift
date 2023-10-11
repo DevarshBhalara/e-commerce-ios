@@ -22,12 +22,22 @@ class AuthCoordinator: Coordinator {
     func start() {
         let authVC = AuthVC.instantiate(from: .auth)
         authVC.authCoordinator = self
-        navigationController.viewControllers = [authVC]
+        navigationController.pushViewController(authVC, animated: true)
     }
     
     func goToHome() {
         let homeCoordinator = HomeCoordinator(navigationController: navigationController)
         homeCoordinator.start()
+    }
+    
+    func popToBack() {
+        navigationController.popViewController(animated: true)
+    }
+    
+    func goToSignUp() {
+        let vc = SignUpViewController.instantiate(from: .signUp)
+        vc.signUpCoordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
     
 }
