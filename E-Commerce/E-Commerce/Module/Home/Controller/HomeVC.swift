@@ -10,7 +10,7 @@ import UIKit
 class HomeVC: UIViewController, Storyboarded, SeeAllClick {
     
     func goToSeeAllPage(name: String) {
-        print(name)
+        homeCoordinator?.gotoCategoryProducts(category: name)
     }
     
 
