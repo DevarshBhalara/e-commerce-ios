@@ -22,4 +22,8 @@ class HomeCoordinator: Coordinator {
         navigationController.viewControllers = [vc]
     }
     
+    func gotoCategoryProducts(category: String) {
+        let categoryProductCoordinator = CategoryProductCoordinator(navigationController: navigationController, category: category)
+        categoryProductCoordinator.start()
+    }
 }

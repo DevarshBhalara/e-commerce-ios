@@ -12,6 +12,7 @@ enum RequestItemsType: Equatable {
     case login
     case initialProducts
     case signUp
+    case categoryProduct(String)
 }
 
 // MARK: Extensions
@@ -24,14 +25,14 @@ extension RequestItemsType: EndPointType {
     var baseURL: String {
         
         switch self {
-        case .login, .initialProducts, .signUp:
+        case .login, .initialProducts, .signUp, .categoryProduct:
             return AppConstants.baseApi
         }
     }
     
     var version: String {
         switch self {
-        case .login, .initialProducts, .signUp:
+        case .login, .initialProducts, .signUp, .categoryProduct:
             return AppConstants.apiVersion
         }
     }
@@ -44,6 +45,8 @@ extension RequestItemsType: EndPointType {
             return "get-product/"
         case .signUp:
             return "sign-up/"
+        case .categoryProduct(let category):
+            return "get-product?category=\(category)"
         }
     }
     
@@ -51,17 +54,17 @@ extension RequestItemsType: EndPointType {
         switch self {
         case .login, .signUp:
             return .post
-        case .initialProducts:
+        case .initialProducts, .categoryProduct:
             return .get
         }
     }
     
     var headers: HTTPHeaders? {
         switch self {
-        case .initialProducts, .signUp:
-            return ["Authorization" : KeychainHelper.shared.accessToken ?? ""]
         case .login:
-            return []
+            return [] 
+        default:
+            return ["Authorization" : KeychainHelper.shared.accessToken ?? ""]
         }
     }
     
