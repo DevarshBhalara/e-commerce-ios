@@ -60,4 +60,8 @@ extension CategoryProductVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         view.frame.height / 3.5
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        categoryProductCoordinator?.gotoProductDetail(product: products[indexPath.row])
+    }
 }

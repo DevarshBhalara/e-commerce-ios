@@ -26,4 +26,9 @@ class CategoryProductCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func gotoProductDetail(product: CategoryData) {
+        let coordinator = ProductDetailCoordinator(navigationController: navigationController, product: product)
+        coordinator.start()
+    }
+    
 }
