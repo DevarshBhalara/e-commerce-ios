@@ -34,6 +34,7 @@ class LoginViewModel {
             switch result {
             case .success(let loginResponse):
                 KeychainHelper.shared.accessToken = loginResponse.sToken
+                KeychainHelper.shared.role = loginResponse.eRole
                 self.loginSuccess.value = loginResponse
             case .failure(let error):
                 self.loginError.value = error

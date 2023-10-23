@@ -20,13 +20,19 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        KeychainHelper.shared.accessToken == nil ? goToAuth() : goToCombineScreen()
+        KeychainHelper.shared.accessToken == nil  ? goToAuth() : goToCombineScreen()
     }
     
     func goToCombineScreen() {
-        let combineCoordinator = HomeCoordinator(navigationController: navigationController)
-        self.window.rootViewController = navigationController
-        combineCoordinator.start()
+        if (KeychainHelper.shared.role == "USER") {
+            let combineCoordinator = HomeCoordinator(navigationController: navigationController)
+            self.window.rootViewController = navigationController
+            combineCoordinator.start()
+        } else {
+            let homeSellerCoordinator = HomeSellerCoordinator(navigationController: navigationController)
+            self.window.rootViewController = navigationController
+            homeSellerCoordinator.start()
+        }
     }
     
     func goToAuth(with code: String? = nil) {

@@ -30,6 +30,11 @@ class AuthCoordinator: Coordinator {
         homeCoordinator.start()
     }
     
+    func goToHomeSeller() {
+        let homeSellerCoordinator = HomeSellerCoordinator(navigationController: navigationController)
+        homeSellerCoordinator.start()
+    }
+    
     func popToBack() {
         navigationController.popViewController(animated: true)
     }

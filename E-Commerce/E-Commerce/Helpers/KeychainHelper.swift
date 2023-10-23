@@ -47,6 +47,14 @@ class KeychainHelper {
         }
     }
     
+    var role: String? {
+        get {
+            keychain[.role]
+        } set {
+            keychain[.role] = newValue
+        }
+    }
+    
     // MARK: - Methods
     func clearData(keys: [KeychainWrapper.Key]) {
         keys.forEach { key in
@@ -67,4 +75,5 @@ extension KeychainWrapper.Key {
     static let refreshToken: KeychainWrapper.Key = "refreshToken"
     static let expiryTime: KeychainWrapper.Key = "expiryTime"
     static let userId: KeychainWrapper.Key = "userId"
+    static let role: KeychainWrapper.Key = "role"
 }

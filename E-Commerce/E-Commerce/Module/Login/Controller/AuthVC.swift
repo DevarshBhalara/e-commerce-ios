@@ -35,7 +35,11 @@ class AuthVC: UIViewController, Storyboarded {
         viewModel.loginSuccess.bind { [weak self] loginResponse in
             if let response = loginResponse {
                 print(response)
-                self?.authCoordinator?.goToHome()
+                if (response.eRole == "USER") {
+                    self?.authCoordinator?.goToHome()
+                } else {
+                    self?.authCoordinator?.goToHomeSeller()
+                }
             }
         }
         
