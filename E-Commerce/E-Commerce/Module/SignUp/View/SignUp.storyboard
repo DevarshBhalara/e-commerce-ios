@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFi-c0-8xZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="844.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnm-vJ-yYx">
                                                 <rect key="frame" x="102.66666666666669" y="80" width="185" height="23"/>
@@ -35,7 +35,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-nO-hXK" customClass="TextFieldCustom" customModule="E_Commerce" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="139" width="350" height="40.333333333333343"/>
+                                                <rect key="frame" x="20" y="139" width="350" height="50.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -43,7 +43,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9oD-wf-hBf" customClass="TextFieldCustom" customModule="E_Commerce" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="208.66666666666666" width="350" height="40.333333333333343"/>
+                                                <rect key="frame" x="20" y="219" width="350" height="50.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -51,7 +51,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvA-h6-qCE" customClass="TextFieldCustom" customModule="E_Commerce" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="287.33333333333331" width="350" height="34"/>
+                                                <rect key="frame" x="20" y="308" width="350" height="42.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -59,12 +59,12 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7N-SN-pbZ" customClass="TextFieldPassword" customModule="E_Commerce" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="358.66666666666669" width="350" height="34"/>
+                                                <rect key="frame" x="20" y="388" width="350" height="42.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1r-Ye-Bt3">
-                                                <rect key="frame" x="153" y="512.66666666666663" width="84" height="35"/>
+                                                <rect key="frame" x="153" y="550.66666666666663" width="84" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Sign Up">
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,7 +74,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbK-V6-fQ5" customClass="RadioButton" customModule="E_Commerce" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="418" width="60" height="35"/>
+                                                <rect key="frame" x="20" y="456" width="60" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="User"/>
                                                 <userDefinedRuntimeAttributes>
@@ -85,7 +85,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOk-G4-7Ih" customClass="RadioButton" customModule="E_Commerce" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="453" width="67" height="35"/>
+                                                <rect key="frame" x="20" y="491" width="67" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Seller"/>
                                                 <connections>
@@ -157,16 +157,22 @@
     </scenes>
     <designables>
         <designable name="9oD-wf-hBf">
-            <size key="intrinsicContentSize" width="127" height="34"/>
+            <size key="intrinsicContentSize" width="168" height="42.666666666666664"/>
+        </designable>
+        <designable name="DbK-V6-fQ5">
+            <size key="intrinsicContentSize" width="60" height="34.333333333333336"/>
         </designable>
         <designable name="d4N-nO-hXK">
-            <size key="intrinsicContentSize" width="66" height="34"/>
+            <size key="intrinsicContentSize" width="107" height="42.666666666666664"/>
         </designable>
         <designable name="o7N-SN-pbZ">
             <size key="intrinsicContentSize" width="90.333333333333329" height="34"/>
         </designable>
         <designable name="tvA-h6-qCE">
-            <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
+            <size key="intrinsicContentSize" width="103.66666666666667" height="42.666666666666664"/>
+        </designable>
+        <designable name="yOk-G4-7Ih">
+            <size key="intrinsicContentSize" width="67" height="34.333333333333336"/>
         </designable>
     </designables>
     <resources>
