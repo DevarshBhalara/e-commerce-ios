@@ -23,6 +23,7 @@ class HomeSellerCoordinator: Coordinator {
     }
     
     func gotoAddProduct() {
-        
+        let coordinator = AddProductCoordinator(navigationController: navigationController)
+        coordinator.start()
     }
 }
