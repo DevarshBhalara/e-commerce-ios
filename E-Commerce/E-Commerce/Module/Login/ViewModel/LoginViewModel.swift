@@ -24,7 +24,7 @@ class LoginViewModel {
     }
     
     private func callLoginApi(loginRequest: LoginRequest) {
-        var param = loginRequest.getRequestParams()
+        let param = loginRequest.getRequestParams()
         APIManager.shared.call(type: .login, params: param) { [weak self] (result: Result<LoginResponse, CustomError>) in
             
             guard let self = self else {

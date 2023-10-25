@@ -58,6 +58,42 @@ class APIManager {
         }
     }
     
+    //MARK: - Uplaod Image Api
+    func callUploadApi<T>(type: RequestItemsType, image: UIImage ,params: Parameters? = nil, handler: @escaping (Result<T, CustomError>) -> Void, progress: @escaping (Progress) -> Void) where T: Codable {
+        
+      
+        guard let imageData = image.jpegData(compressionQuality: 0.8) else {
+            handler(.failure(.init(title: "Appname", body: "Image not found")))
+            return
+        }
+        
+        self.sessionManager.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(imageData, withName: "image", fileName: "image.jpg", mimeType: "image/jpeg")
+        }, to: type.url)
+        .responseData { response in
+            print(response)
+            
+            guard let data = response.data else {
+                handler(.failure(.init(title: "AppName", body: "Data not Found")))
+                return
+            }
+            
+            if self.handleResponseCode(res: response) {
+                do {
+                    let response = try JSONDecoder().decode(T.self, from: data)
+                    print(response)
+                    handler(.success(response))
+                } catch let error {
+                    handler(.failure(.init(title: "AppName", body: "Not able to response \(error)")))
+                }
+            }
+        }.uploadProgress {
+            progressCount in
+            progress(progressCount)
+        }
+    }
+    
+    
     // Handle Response
     private func handleResponseCode(res: AFDataResponse<Data>?) -> Bool {
         var isSuccess: Bool = false

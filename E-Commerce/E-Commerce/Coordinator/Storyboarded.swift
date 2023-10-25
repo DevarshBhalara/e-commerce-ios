@@ -14,6 +14,7 @@ enum Storyboard: String {
     case categoryProduct = "CategoryProduct"
     case productDetail = "ProductDetail"
     case homeSeller = "HomeSeller"
+    case addProductSeller = "AddProductSeller"
 }
 
 protocol Storyboarded {

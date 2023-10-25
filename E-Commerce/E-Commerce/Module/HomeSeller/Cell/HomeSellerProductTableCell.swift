@@ -18,7 +18,7 @@ class HomeSellerProductTableCell: UITableViewCell {
     @IBOutlet weak var btnDelete: UIButton!
     
     func configureCell(data: CategoryData) {
-        imgProduct.kf.setImage(with: URL(string: "https://i.ibb.co/tHL2KLD/iphone13.jpg"))
+        imgProduct.kf.setImage(with: URL(string:  data.sImage ?? "https://i.ibb.co/tHL2KLD/iphone13.jpg"))
         lblProductName.text = data.sName
         lblBrandName.text = data.sBrandName
         lblPrice.text = "\(data.dPrice ?? 0.0)"

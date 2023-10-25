@@ -14,6 +14,8 @@ enum RequestItemsType: Equatable {
     case signUp
     case categoryProduct(String)
     case sellerProducts
+    case uploadImage
+    case addProduct
 }
 
 // MARK: Extensions
@@ -26,15 +28,19 @@ extension RequestItemsType: EndPointType {
     var baseURL: String {
         
         switch self {
-        case .login, .initialProducts, .signUp, .categoryProduct, .sellerProducts:
+        case .login, .initialProducts, .signUp, .categoryProduct, .sellerProducts, .addProduct:
             return AppConstants.baseApi
+        case .uploadImage:
+            return AppConstants.uploadImageApi
         }
     }
     
     var version: String {
         switch self {
-        case .login, .initialProducts, .signUp, .categoryProduct, .sellerProducts:
+        case .login, .initialProducts, .signUp, .categoryProduct, .sellerProducts, .addProduct:
             return AppConstants.apiVersion
+        case .uploadImage:
+            return "1/"
         }
     }
     
@@ -50,12 +56,16 @@ extension RequestItemsType: EndPointType {
             return "get-product?category=\(category)"
         case .sellerProducts:
             return "seller-product"
+        case .uploadImage:
+            return "upload"
+        case .addProduct:
+            return "add-product"
         }
     }
     
     var httpMethod: HTTPMethod {
         switch self {
-        case .login, .signUp:
+        case .login, .signUp, .uploadImage, .addProduct:
             return .post
         default:
             return .get
@@ -64,15 +74,20 @@ extension RequestItemsType: EndPointType {
     
     var headers: HTTPHeaders? {
         switch self {
-        case .login:
-            return [] 
+        case .login, .uploadImage, .signUp:
+            return []
         default:
             return ["Authorization" : KeychainHelper.shared.accessToken ?? ""]
         }
     }
     
     var url: URL {
-        return URL(string: self.baseURL + self.version +  self.path)!
+        switch self {
+        case .uploadImage:
+            return URL(string: self.baseURL + self.version + self.path + "?" + "key=f8fe9a449ea4b2a9b7387b9e0d3d59c7")!
+        default :
+            return URL(string: self.baseURL + self.version +  self.path)!
+        }
     }
     
     var encoding: ParameterEncoding {

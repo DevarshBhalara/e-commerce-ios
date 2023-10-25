@@ -185,6 +185,9 @@
                                 <rect key="frame" x="326" y="763.66666666666663" width="47" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="actionGotoAddProduct:" destination="3iO-Dm-ied" eventType="touchUpInside" id="K2e-aD-yVX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fBZ-bt-ghp"/>
@@ -201,7 +204,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnAddProduct" destination="7yo-mb-hGx" id="SMY-ga-y4s"/>
                         <outlet property="clvCategory" destination="OKJ-gS-MaT" id="njq-q4-eVh"/>
                         <outlet property="lblNoProduct" destination="NGM-Xu-n3t" id="Wrs-lm-crk"/>
                         <outlet property="tblHome" destination="t5g-aP-G4B" id="SSE-bG-vli"/>
